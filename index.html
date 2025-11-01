@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>RiiTube</title>
+	<meta name="keywords" content="Wii,YouTube,RiiTube">
+	<meta property="og:title" content="RiiTube">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="http://riitube.net/image/logo.png">
+	<meta property="og:url" content="http://riitube.net/">
+	<meta property="og:description" content="A way to watch YouTube on your Wii">
+	<meta property="og:site_name" content="RiiTube">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+    * {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    html {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+        background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(./image/bg.png);
+        max-height: 200px;
+        background-size: cover;
+        padding: 32px 8px 16px 8px;
+        margin-bottom: 32px;
+    }
+    .logo {
+        filter:
+          drop-shadow(0 0 4px #0080ff)
+          drop-shadow(0 0 8px #0080ff)
+          drop-shadow(0 0 11px #0080ff)
+          drop-shadow(0 0 1px #ffffff);
+    }
+
+    #main {
+        margin: 16px;
+    }
+
+    .section > h2 {
+        text-align: center;
+        padding-bottom: 16px;
+        border-bottom: 1px solid darkgray;
+    }
+    .section {
+        background-color: #fff;
+        padding: 2px 16px 2px 16px;
+
+        border: 2px solid darkgray;
+
+        -webkit-border-radius: 16px;
+
+        margin-bottom: 32px;
+    }
+
+    .button {
+        text-decoration: none;
+    }
+    hr {
+        border: 0;
+        color: darkgray;
+        background-color: darkgray;
+        height: 1px;
+    }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <center>
+            <img class="logo" width="19%" src="./image/logo.png" />
+            <br>
+            <h3 style="color: white;">A way to watch YouTube on your Wii</h3>
+        </center>
+    </div>
+    <div id="main">
+        <div align="center" class="section">
+            <h2>Welcome</h2>
+			<p>RiiTube allows you to watch YouTube videos on your Wii using WiiMC, a homebrew app that functions as a media player.</p>
+            <small>Questions or feedback? Email us at admin@riitube.net</small>
+        </div>
+        <div class="section">
+            <h2 align="center">How to Install</h2>
+            <ol>
+                <li>Make sure your Wii is modded and has the Homebrew Channel. <a href="http://wii.hacks.guide/">wii.hacks.guide</a> is the best tutorial to mod your Wii.</li>
+                <li>Download both <a href="http://oscwii.org/library/app/wiimc">WiiMC</a> and <a href="http://oscwii.org/library/app/wiimc-ss/">WiiMC-SS</a>. WiiMC is needed since it contains the path for RiiTube's XML. WiiMC-SS is a better version of WiiMC which we highly recommend you use.</li>
+                <li>Launch WiiMC-SS from the Homebrew Channel.</li>
+                <li>Press the Network icon (should be to the right of the disc icon) at the top of the screen. You should be able to use RiiTube.</li>
+            </ol>
+        </div>
+        <div class="section">
+            <h2 align="center">Features</h2>
+            <ul>
+                <li>Supports YouTube, as well as Dailymotion and Vimeo</li>
+                <li>Shows video thumbnails for videos</li>
+                <li>Works on any homebrewed Wii or Wii U console</li>
+                <li>No advertisements</li>
+                <li>Easy to use</li>
+            </ul>
+        </div>
+        <div align="center" class="section">
+            <h2>FAQ</h2>
+            <h3>RiiTube does not work, I am getting some sort of error on WiiMC</h3>
+            <p>It's possible there's a problem with the video you are trying to play. Try another video. If you still get issues, it might be a problem with the server, as the setup we use might break every now and then. Email us at admin@riitube.net and we'll take a look.</p>
+            <h3>How does RiiTube work?</h3>
+            <p>For YouTube, we use a alternative API for YouTube called Invidious. To download the videos and serve them to your Wii, we use yt-dlp.</p>
+            <h3>Does RiiTube work with the Internet Channel or the YouTube channel?</h3>
+            <p>No. You can try using <a href="http://revivemii.xyz">ReviveMii</a> which has a service to use either of those.</p>
+            <h3>Why am I unable to fast forward / rewind videos on RiiTube?</h3>
+            <p>Unfortunately we do not support that feature.</p>
+            <h3>Will you support IPTV?</h3>
+            <p>At one point, we supported IPTV channels being played via RiiTube, however we had to take it down because WiiMC kept aborting the streams prematurely.</p>
+        </div>
+        <br>
+    </div>
+</body>
+</html>
