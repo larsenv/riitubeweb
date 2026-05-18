@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -8,125 +8,288 @@
     <meta name="apple-mobile-web-app-title" content="RiiTube - YouTube on Wii" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>RiiTube - YouTube on Wii</title>
-	<meta name="description" content="RiiTube provides a way to watch YouTube on your Wii">
-	<meta name="keywords" content="Wii,YouTube,RiiTube">
-	<meta property="og:title" content="RiiTube - YouTube on Wii">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RiiTube - Watch YouTube on your Wii</title>
+	<meta name="description" content="RiiTube is a free service that allows you to stream YouTube videos on your Wii or Wii U using WiiMC.">
+	<meta name="keywords" content="Wii, YouTube on Wii, RiiTube, WiiMC, Wii Homebrew, Watch YouTube on Wii">
+	
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://riitube.net/" />
+
+    <!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
-	<meta property="og:image" content="http://riitube.net/image/logo.png">
-	<meta property="og:url" content="http://riitube.net/">
-	<meta property="og:description" content="RiiTube provides a way to watch YouTube on your Wii">
+	<meta property="og:url" content="https://riitube.net/">
+	<meta property="og:title" content="RiiTube - Watch YouTube on your Wii">
+	<meta property="og:description" content="Stream YouTube videos on your Wii or Wii U with RiiTube and WiiMC.">
+	<meta property="og:image" content="https://riitube.net/image/logo.png">
 	<meta property="og:site_name" content="RiiTube">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://riitube.net/">
+    <meta property="twitter:title" content="RiiTube - Watch YouTube on your Wii">
+    <meta property="twitter:description" content="Stream YouTube videos on your Wii or Wii U with RiiTube and WiiMC.">
+    <meta property="twitter:image" content="https://riitube.net/image/logo.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "RiiTube",
+      "url": "https://riitube.net/",
+      "description": "Stream YouTube videos on your Wii or Wii U using WiiMC."
+    }
+    </script>
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.3.3/dist/css/materialize.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
 
     <style type="text/css">
     * {
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
     }
+    
     html {
-      font-family: "Open Sans", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-        background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(./image/bg.png);
-        max-height: 200px;
+        font-family: "rodin", sans-serif;
+        background-color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(./image/bg.png);
         background-size: cover;
-        padding: 32px 8px 16px 8px;
-        margin-bottom: 32px;
-    }
-    .logo {
-        filter:
-          drop-shadow(0 0 4px #0080ff)
-          drop-shadow(0 0 8px #0080ff)
-          drop-shadow(0 0 11px #0080ff)
-          drop-shadow(0 0 1px #ffffff);
+        background-position: center;
+        background-attachment: fixed;
+        color: #dcdcdf;
+        margin: 0;
     }
 
-    #main {
-        margin: 16px;
-    }
-
-    .section > h2 {
+    #header-banner {
+        padding: 5rem 1rem 1rem 1rem;
         text-align: center;
-        padding-bottom: 16px;
-        border-bottom: 1px solid darkgray;
-    }
-    .section {
-        background-color: #fff;
-        padding: 2px 16px 2px 16px;
-
-        border: 2px solid darkgray;
-
-        -webkit-border-radius: 16px;
-
-        margin-bottom: 32px;
     }
 
-    .button {
-        text-decoration: none;
+    .logo {
+        -webkit-filter: drop-shadow(0 0 10px #0080ff);
+        filter: drop-shadow(0 0 10px #0080ff);
+        max-width: 350px;
+        margin-bottom: 2.5rem;
     }
-    hr {
-        border: 0;
-        color: darkgray;
-        background-color: darkgray;
-        height: 1px;
+
+    .white-text {
+        /* General white-text shadow removed */
+    }
+
+    #header-banner h1 {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .card {
+        background-color: rgba(34, 34, 34, 0.9);
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
+    }
+
+    .card-title {
+        font-weight: 700 !important;
+        border-bottom: 1px solid #444;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .section-padding {
+        padding: 1rem 0 0 0;
+    }
+
+    .discord-container {
+        position: relative;
+        width: 100%;
+        max-width: 610px;
+        margin: 0 auto;
+        padding-bottom: 500px;
+        height: 0;
+    }
+
+    .discord-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+    .community-card {
+        background-color: rgba(43, 43, 47, 0.8);
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .btn {
+        border-radius: 8px;
+        text-transform: none;
+        letter-spacing: 0.5px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    footer {
+        margin-top: auto;
+        background-color: rgba(0, 0, 0, 0.8) !important;
+    }
+
+    /* @font-face — placed last for compatibility with older browsers */
+    @font-face {
+        font-display: swap;
+        font-family: 'rodin';
+        src:
+            url('./font/RodinNTLGPro-DB-AlphaNum.woff2') format('woff2'),
+            url('./font/RodinNTLGPro-DB-AlphaNum.woff') format('woff');
+        font-weight: 400;
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: 'rodin';
+        src:
+            url('./font/RodinNTLGPro-B-AlphaNum.woff2') format('woff2'),
+            url('./font/RodinNTLGPro-B-AlphaNum.woff') format('woff');
+        font-weight: 700;
     }
     </style>
 </head>
 <body>
-    <div id="header">
-        <center>
-            <img class="logo" width="250" src="./image/logo.png" />
-            <br>
-            <h3 style="color: white;">A way to watch YouTube on your Wii</h3>
-        </center>
-    </div>
-    <div id="main">
-        <div align="center" class="section">
-            <h1>Welcome</h1>
-			<p>RiiTube allows you to watch YouTube videos on your Wii using WiiMC, a homebrew app that functions as a media player.</p>
-            <p>Questions or feedback? Email us at admin@riitube.net</p>
+    <header id="header-banner">
+        <div class="container">
+            <img class="logo responsive-img" src="./image/logo.png" alt="RiiTube Logo" />
+            <h1 class="white-text" style="font-weight: 800; font-size: 2.5rem; margin-top: 0;">A way to watch YouTube on your Wii</h1>
         </div>
-        <div class="section">
-            <h2 align="center">How to Install</h2>
-            <ol>
-                <li>Make sure your console is modded and has the Homebrew Channel. <a href="http://wii.hacks.guide/">wii.hacks.guide</a> is the best tutorial to mod your console.</li>
-                <li>Download both <a href="http://oscwii.org/library/app/wiimc-ss">WiiMC-SS</a>. WiiMC-SS is a better version of WiiMC which we highly recommend you use.</li>
-                <li>Launch WiiMC-SS from the Homebrew Channel.</li>
-                <li>Press the Network icon (should be to the right of the disc icon) at the top of the screen. You should be able to use RiiTube.</li>
-            </ol>
+    </header>
+
+    <main class="container section-padding">
+        <div class="row">
+            <!-- Welcome Section -->
+            <div class="col s12">
+                <div class="card z-depth-2">
+                    <div class="card-content white-text">
+                        <h2 class="card-title blue-text text-lighten-2" style="font-size: 1.5rem;"><i class="fa-solid fa-house" style="margin-right: 10px;"></i> Welcome</h2>
+                        <p class="light" style="font-size: 1.2rem; line-height: 2rem;">
+                            RiiTube allows you to watch YouTube videos on your Wii using WiiMC, a homebrew app that functions as a media player.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How to Install Section -->
+            <div class="col s12 l6">
+                <div class="card z-depth-2" style="min-height: 380px;">
+                    <div class="card-content white-text">
+                        <h2 class="card-title green-text text-accent-3" style="font-size: 1.5rem;"><i class="fa-solid fa-download" style="margin-right: 10px;"></i> How to Install</h2>
+                        <ol class="light grey-text text-lighten-2" style="padding-left: 20px; line-height: 1.8rem;">
+                            <li>Make sure your console is modded and has the Homebrew Channel. Visit <a href="http://wii.hacks.guide/" class="blue-text text-lighten-3">wii.hacks.guide</a> for tutorials.</li>
+                            <li>Download <a href="http://oscwii.org/library/app/wiimc-ss" class="blue-text text-lighten-3">WiiMC-SS</a>, our highly recommended version of WiiMC.</li>
+                            <li>Launch WiiMC-SS from the Homebrew Channel.</li>
+                            <li>Select the <strong>Network icon</strong> (to the right of the disc icon) at the top to start streaming.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="col s12 l6">
+                <div class="card z-depth-2" style="min-height: 380px;">
+                    <div class="card-content white-text">
+                        <h2 class="card-title orange-text text-accent-2" style="font-size: 1.5rem;"><i class="fa-solid fa-list-check" style="margin-right: 10px;"></i> Features</h2>
+                        <ul class="light grey-text text-lighten-2" style="line-height: 2rem;">
+                            <li>Supports YouTube, Dailymotion, and Vimeo</li>
+                            <li>Video thumbnails for easy browsing</li>
+                            <li>Works on any homebrewed Wii or Wii U</li>
+                            <li>Completely advertisement-free</li>
+                            <li>Simple plug-and-play experience</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Discord & Contact Section -->
+            <div class="col s12">
+                <div class="card z-depth-2 center-align">
+                    <div class="card-content white-text">
+                        <h2 class="card-title blue-text text-lighten-2" style="font-size: 1.5rem;"><i class="fa-brands fa-discord" style="margin-right: 10px;"></i> Community Support</h2>
+                        <p class="light grey-text text-lighten-2" style="margin-bottom: 2rem; font-size: 1.1rem;">
+                            Join our Discord server to chat with other users, get help, or stay updated on the latest news.
+                        </p>
+                        
+                        <div class="community-card z-depth-1 left-align">
+                            <h3 class="white-text" style="font-size: 1.3rem; margin-top: 0;"><i class="fa-solid fa-envelope-open-text blue-text text-lighten-2" style="margin-right: 10px;"></i> Get in Touch</h3>
+                            <p class="grey-text text-lighten-1">
+                                Have questions, feedback, or need technical assistance? Reach out to our team.
+                            </p>
+                            <a href="mailto:admin@riitube.net" class="btn waves-effect waves-light blue darken-2" style="text-transform: none;">
+                                <i class="fa-solid fa-paper-plane left" style="margin-right: 10px;" aria-hidden="true"></i> Email Us
+                            </a>
+                        </div>
+
+                        <div class="discord-container">
+                            <iframe src="https://discord.com/widget?id=1458115476025639018&theme=dark" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" title="RiiTube Discord Widget"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="col s12">
+                <div class="card z-depth-2">
+                    <div class="card-content white-text">
+                        <h2 class="card-title yellow-text text-accent-4" style="font-size: 1.5rem;"><i class="fa-solid fa-circle-question" style="margin-right: 10px;"></i> FAQ</h2>
+                        
+                        <div class="faq-item">
+                            <h3 class="blue-text text-lighten-2" style="font-size: 1.3rem; font-weight: 600; margin-top: 0;">RiiTube does not work, I am getting an error on WiiMC</h3>
+                            <p class="light grey-text text-lighten-1">It's possible there's a problem with the specific video. Try another one. If issues persist, the server might be undergoing maintenance. Join our Discord for real-time status updates.</p>
+                        </div>
+                        
+                        <div class="faq-item" style="margin-top: 2rem;">
+                            <h3 class="blue-text text-lighten-2" style="font-size: 1.3rem; font-weight: 600; margin-top: 0;">How does RiiTube work?</h3>
+                            <p class="light grey-text text-lighten-1">We utilize yt-dlp and serve videos through specialized proxies to ensure compatibility with legacy hardware like the Wii.</p>
+                        </div>
+                        
+                        <div class="faq-item" style="margin-top: 2rem;">
+                            <h3 class="blue-text text-lighten-2" style="font-size: 1.3rem; font-weight: 600; margin-top: 0;">Does it work with the official YouTube Channel or the Internet Channel?</h3>
+                            <p class="light grey-text text-lighten-1">No, RiiTube is specifically designed to work within WiiMC.</p>
+                        </div>
+
+                        <div class="faq-item" style="margin-top: 2rem;">
+                            <h3 class="blue-text text-lighten-2" style="font-size: 1.3rem; font-weight: 600; margin-top: 0;">Why can't I fast forward or rewind?</h3>
+                            <p class="light grey-text text-lighten-1">Seeking is currently unsupported due to the way videos are streamed to the media player.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="section">
-            <h2 align="center">Features</h2>
-            <ul>
-                <li>Supports YouTube, as well as Dailymotion and Vimeo</li>
-                <li>Shows video thumbnails for videos</li>
-                <li>Works on any homebrewed Wii or Wii U console</li>
-                <li>No advertisements</li>
-                <li>Easy to use</li>
-            </ul>
+    </main>
+
+    <footer class="page-footer grey darken-4 left-align" style="padding: 0.75rem 0;">
+        <div class="container">
+            <p class="grey-text text-lighten-1">&copy; 2026 RiiTube. All rights reserved. <br> Not affiliated with Google, YouTube, or Nintendo.</p>
         </div>
-        <div align="center" class="section">
-            <h2 align="center">Discord</h2>
-			<iframe src="https://discord.com/widget?id=1458115476025639018&theme=dark" width="610" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-		</div>
-        <div align="center" class="section">
-            <h2>FAQ</h2>
-            <h3>RiiTube does not work, I am getting some sort of error on WiiMC</h3>
-            <p>It's possible there's a problem with the video you are trying to play. Try another video. If you still get issues, it might be a problem with the server, as the setup we use might break every now and then. Join our Discord or email us at admin@riitube.net and we'll take a look.</p>
-            <h3>How does RiiTube work?</h3>
-            <p>For YouTube, we use a alternative API for YouTube called Invidious. To download the videos and serve them to your Wii, we use yt-dlp.</p>
-            <h3>Does RiiTube work with the Internet Channel or the YouTube channel?</h3>
-            <p>No.</p>
-            <h3>Why am I unable to fast forward / rewind videos on RiiTube?</h3>
-            <p>Unfortunately we do not support that feature.</p>
-            <h3>Will you support IPTV?</h3>
-            <p>At one point, we supported IPTV channels being played via RiiTube, however we had to take it down because WiiMC kept aborting the streams prematurely.</p>
-        </div>
-        <br>
-    </div>
+    </footer>
+
+    <!-- Materialize JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.3.3/dist/js/materialize.min.js"></script>
 </body>
 </html>
