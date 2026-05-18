@@ -177,10 +177,47 @@
 <body>
     <header id="header-banner">
         <div class="container">
-            <img class="logo responsive-img" src="./image/logo.png" alt="RiiTube Logo" />
-            <h1 class="white-text" style="font-weight: 800; font-size: 2.5rem; margin-top: 0;">A way to watch YouTube on your Wii</h1>
+            <img class="logo responsive-img" src="./image/logo.png" alt="RiiTube - Watch YouTube on your Wii" />
+            <h1 class="white-text" style="font-weight: 800; font-size: 2.5rem; margin-top: 0;">RiiTube: Watch YouTube on your Wii</h1>
         </div>
     </header>
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Why is RiiTube not working or giving an error in WiiMC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It's possible there's a problem with the specific video. Try another one. If issues persist, the server might be undergoing maintenance. Join our Discord for real-time status updates."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How does RiiTube work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We utilize yt-dlp and serve videos through specialized proxies to ensure compatibility with legacy hardware like the Wii."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does RiiTube work with the official YouTube Channel or the Internet Channel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, RiiTube is specifically designed to work within WiiMC."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Why can't I fast forward or rewind videos on RiiTube?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Seeking is currently unsupported due to the way videos are streamed to the media player."
+        }
+      }]
+    }
+    </script>
 
     <main class="container section-padding">
         <div class="row">
